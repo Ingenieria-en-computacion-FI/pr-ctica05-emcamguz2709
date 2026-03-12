@@ -45,9 +45,7 @@ void lista_insertar_tail(Lista* lista, int dato)
 
 int lista_eliminar_head(Lista* lista)
 {
-    if(lista_vacia(lista)){
-        
-    }
+
     /*
     TODO:
 
@@ -61,6 +59,15 @@ int lista_eliminar_head(Lista* lista)
     */
 
     return -1;
+    Nodo* temp = lista -> head
+    dato = temp -> dato
+    lista -> head = lista -> head -> siguiente;
+
+    if(lista->head==NULL){
+        lista->tail==NULL;
+    }
+
+    free(temp);
 }
 
 int lista_eliminar_tail(Lista* lista)
